@@ -237,8 +237,8 @@ void Game::ProcessCollision()
 				_green_block[i] = 1;// Marcar el texto del bloque como verde en el array _green_block
 				_number++;// Incrementar _number
 			}
-			// Si el bloque no corresponde al número esperado y no ha sido golpeado
-			else if (_number != i && _block[i]->GetHit() == false)
+			// Si el bloque no corresponde al número esperado
+			else if (_number != i)
 			{
 				_block[i]->SetHit();// Marcar el bloque como golpeado
 				_audio->PlayWrongBlock();// Reproducir sonido de bloque incorrecto
@@ -293,7 +293,15 @@ void Game::GameOver()
 		_gameOverText->setCharacterSize(100);
 		_gameOverText->setFillColor(Color::White);
 		_gameOverText->setPosition(200, 100);
-		_gameOverText->setString("GAME OVER");
+
+		if (_gameOver)
+		{
+			_gameOverText->setString("GAME OVER");
+		}
+		else if (_youWin)
+		{
+			_gameOverText->setString("¡YOU WIN!");
+		}
 	}
 
 	Event evt;

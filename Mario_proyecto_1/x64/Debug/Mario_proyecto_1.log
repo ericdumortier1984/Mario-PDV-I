@@ -1,6 +1,8 @@
-﻿  Audio.cpp
-  Go.cpp
-C:\Users\gabri\Documents\ERIC CURSO\Tecnicatura en Videojuegos\PROGRAMACIÓN DE VIDEOJUEGOS I\ENTREGAS\Mario-PDV-I\Mario_proyecto_1\Go.cpp(5,12): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
-  Generando código...
-  LINK : no se encontró C:\Users\gabri\Documents\ERIC CURSO\Tecnicatura en Videojuegos\PROGRAMACIÓN DE VIDEOJUEGOS I\ENTREGAS\Mario-PDV-I\x64\Debug\Mario_proyecto_1.exe o no lo generó el último vínculo incremental; ejecutando vínculo completo
+﻿  Game.cpp
+C:\Users\gabri\Documents\ERIC CURSO\Tecnicatura en Videojuegos\PROGRAMACIÓN DE VIDEOJUEGOS I\ENTREGAS\Mario-PDV-I\Mario_proyecto_1\Game.cpp(99,57): warning C4244: 'argumento': conversión de 'const int' a 'T'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+C:\Users\gabri\Documents\ERIC CURSO\Tecnicatura en Videojuegos\PROGRAMACIÓN DE VIDEOJUEGOS I\ENTREGAS\Mario-PDV-I\Mario_proyecto_1\Game.cpp(351,2): warning C4154: eliminación de una expresión de matriz; suministrada una conversión a puntero
   Mario_proyecto_1.vcxproj -> C:\Users\gabri\Documents\ERIC CURSO\Tecnicatura en Videojuegos\PROGRAMACIÓN DE VIDEOJUEGOS I\ENTREGAS\Mario-PDV-I\x64\Debug\Mario_proyecto_1.exe
