@@ -101,6 +101,7 @@ void Game::DoEvents()
 		_velocity.y = -10.f;// Reinicia la velocidad vertical inicial para el salto
 		}
 	}
+	if (e.key.code == Keyboard::R) { w->close(); new Game; };//reiniciar juego
 }
 
 void Game::Loop()
@@ -137,8 +138,8 @@ void Game::InitMario()
 	_mario->Add("run", { 3, 4, 5, 4 }, 8, true);// Agregar la animación de correr
 	_mario->Add("jump", { 14 }, 8, true);// Agregar la animación de salto
 	_mario->Play("idle");// Establecer la animación inicial en "idle"
-	_mario->setScale(Vector2f(0.25f, 0.25f));// Escalar el sprite de Mario a un 25% de su tama
-	_mario->setOrigin(_mario->getOrigin().x / 2, _mario->getGlobalBounds().height - 16);// Establece el origen en el centro del ancho
+	_mario->setScale(Vector2f(0.25f, 0.25f));// Escalar el sprite de Mario a un 25% de su tamaño
+	_mario->setOrigin(_mario->getOrigin().x / 2, _mario->getGlobalBounds().height - 16);// Establece el origen en el centro del ancho y 16 pixeles en alto
 	_mario->setPosition(Vector2f(50.f, 470.f));// Posicion inicial en x e y
 	_mario->FlipX(true);// Comienza el sprite mirando a la derecha
 	_velocity = Vector2f(5.f, 0.f);// Setear la velocidad x en 5 (es constante)
@@ -226,7 +227,7 @@ void Game::ProcessCollision()
 	for (int i = 0; i < 10; i++)
 	{
 	    // Si el personaje Mario intersecta con el bloque//////////////////y el bloque no ha sido golpeado
-		if (_mario->getGlobalBounds().intersects(_block[i]->Getposition()) && _block[i]->GetHit() == false)
+		if (_mario->getGlobalBounds().intersects(_block[i]->Getposition()) && !_block[i]->GetHit())
 		{
 		    // Si el texto del bloque es igual al número esperado
 			if ((_block[i]->GetTextString()) == (to_string)(_arrayOK[_number]))
@@ -237,10 +238,8 @@ void Game::ProcessCollision()
 				_green_block[i] = 1;// Marcar el texto del bloque como verde en el array _green_block
 				_number++;// Incrementar _number
 			}
-			// Si el bloque no corresponde al número esperado
-			else if (_number != i)
+			else
 			{
-				_block[i]->SetHit();// Marcar el bloque como golpeado
 				_audio->PlayWrongBlock();// Reproducir sonido de bloque incorrecto
 				_timer->WrongBlock();// Activar el temporizador de penalización
 			}

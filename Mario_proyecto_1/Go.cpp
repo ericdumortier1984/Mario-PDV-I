@@ -1,5 +1,5 @@
 #include "Game.h"
-// Problema a solucionar: si se golpea un bloque en orden incorrecto ya no se puede volver a golpearlo mas adelante
+// To fix: reduccion de tiempo es provisoria hasta encontrar mejores soluciones
 
 int main()
 {

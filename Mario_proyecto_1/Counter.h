@@ -14,6 +14,10 @@ private:
 	int _counterTime;// Tiempo total del contador en segundos
 	int _initTime;// Tiempo inicial del contador en segundos
 	bool _timeUp;// Indica si el tiempo se ha agotado
+	// Variables para controlar si se ha aplicado la reduccion de 10 segundos 
+	bool _timeReduction; 
+	bool _timeReduction2;
+	bool _timeReduction3;
 
 public:
 

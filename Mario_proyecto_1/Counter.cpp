@@ -13,6 +13,10 @@ Counter::Counter()
 	_counterTime = 60;// Tiempo total del contador en segundos
 	_initTime = _counterTime;// Tiempo inicial del contador en segundos
 	_timeUp = false;// Indica si el tiempo se ha agotado
+	// Inicializar las variables de reduccion de tiempo en false
+	_timeReduction = false; 
+	_timeReduction2 = false;
+	_timeReduction3 = false;
 }
 
 Counter::~Counter()
@@ -67,7 +71,21 @@ void Counter::WrongBlock()
 {
 
 	// Reduce el tiempo del contador cuando se golpea un bloque incorrecto
-	*_time -= seconds(10);
+	if (!_timeReduction && (*_time < seconds(60) && *_time > seconds(40)))
+	{
+		*_time -= seconds(10);
+		_timeReduction = true; // Marcar que se ha aplicado la reduccion de tiempo
+	}
+	else if (!_timeReduction2 && (*_time < seconds(40) && *_time > seconds(20)))
+	{
+		*_time -= seconds(10);
+		_timeReduction2 = true; // Marcar que se ha aplicado la reduccion de tiempo
+	}
+	else if (!_timeReduction3 && (*_time < seconds(20) && *_time > seconds(5)))
+	{
+		*_time -= seconds(10);
+		_timeReduction3 = true; // Marcar que se ha aplicado la reduccion de tiempo
+	}
 }
 
 void Counter::StopCounter()

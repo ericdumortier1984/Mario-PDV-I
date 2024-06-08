@@ -27,6 +27,7 @@ public:
 	void SetTextString(const string& text);// Establece el texto dentro del bloque
 	String GetTextString();// Devuelve el texto dentro del bloque
 	void SetColorGreen();// Establece el color del texto del bloque a verde
+	void SetColorWhite();
 	void SetHit();// Establece que el bloque ha sido golpeado
 	bool GetHit();// Devuelve true si el bloque ha sido golpeado
 	void SetPosition(int _xPos, int _yPos);// Establece la posición del bloque

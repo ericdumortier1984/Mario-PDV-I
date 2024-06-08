@@ -1,8 +1,5 @@
-﻿  Game.cpp
-C:\Users\gabri\Documents\ERIC CURSO\Tecnicatura en Videojuegos\PROGRAMACIÓN DE VIDEOJUEGOS I\ENTREGAS\Mario-PDV-I\Mario_proyecto_1\Game.cpp(99,57): warning C4244: 'argumento': conversión de 'const int' a 'T'; posible pérdida de datos
-          with
-          [
-              T=float
-          ]
-C:\Users\gabri\Documents\ERIC CURSO\Tecnicatura en Videojuegos\PROGRAMACIÓN DE VIDEOJUEGOS I\ENTREGAS\Mario-PDV-I\Mario_proyecto_1\Game.cpp(351,2): warning C4154: eliminación de una expresión de matriz; suministrada una conversión a puntero
+﻿  Counter.cpp
+C:\Users\gabri\Documents\ERIC CURSO\Tecnicatura en Videojuegos\PROGRAMACIÓN DE VIDEOJUEGOS I\ENTREGAS\Mario-PDV-I\Mario_proyecto_1\Counter.cpp(36,19): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\gabri\Documents\ERIC CURSO\Tecnicatura en Videojuegos\PROGRAMACIÓN DE VIDEOJUEGOS I\ENTREGAS\Mario-PDV-I\Mario_proyecto_1\Counter.cpp(58,9): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\gabri\Documents\ERIC CURSO\Tecnicatura en Videojuegos\PROGRAMACIÓN DE VIDEOJUEGOS I\ENTREGAS\Mario-PDV-I\Mario_proyecto_1\Counter.cpp(133): warning C4715: 'Counter::TimeUp': no todas las rutas de acceso de control devuelven un valor
   Mario_proyecto_1.vcxproj -> C:\Users\gabri\Documents\ERIC CURSO\Tecnicatura en Videojuegos\PROGRAMACIÓN DE VIDEOJUEGOS I\ENTREGAS\Mario-PDV-I\x64\Debug\Mario_proyecto_1.exe

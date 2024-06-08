@@ -63,6 +63,7 @@ private:
 	// Variables de estado del juego
 	bool _gameOver;
 	bool _youWin;
+	
 public:
 
 	// Constructor y destructor

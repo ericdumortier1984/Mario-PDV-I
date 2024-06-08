@@ -27,6 +27,7 @@ Block::Block(int _v)
 	_textInBox->setOrigin(_textInBox->getGlobalBounds().width, _textInBox->getGlobalBounds().height + 10);// Establece el origen del texto
 }
 
+
 Block::~Block()
 {
 
@@ -102,6 +103,11 @@ void Block::SetColorGreen()
 
 	// Establece el color del texto del bloque a verde
 	_textInBox->setFillColor(Color::Green);
+}
+
+void Block::SetColorWhite()
+{
+	_textInBox->setFillColor(Color::White); // Establecer el color del texto a blanco
 }
 
 void Block::Draw(RenderWindow& _wnd)
